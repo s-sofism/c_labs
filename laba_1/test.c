@@ -3,14 +3,12 @@
 
 void test() 
 {
-    assert(calculating_five(8) == 1);
-    assert(calculating_free(8) == 1);
+    assert(calculating_five(8) == 1);  
     assert(calculating_five(9) == 0);
-    assert(calculating_free(8) == 3);
     assert(calculating_five(30) == 0);
-    assert(calculating_free(30) == 10);
-    assert(input(5) == "enter correct value");
-    assert(input(-9) == "enter correct value");
+    assert(calculating_three(8) == 1);
+    assert(calculating_three(9) == 3);
+    assert(calculating_three(30) == 10);
 }
 #undef main
 
