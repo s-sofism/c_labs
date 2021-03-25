@@ -21,6 +21,7 @@ int calculating_five(int number)
 	int number_five = (number+4)/5;
 	int number_three = (number+2)/3;
 	int i;
+	int temp=0;
 	for (i = 0; i <= number_five; i++)
 	{
 		int j;
@@ -29,13 +30,13 @@ int calculating_five(int number)
 			int temp_sum = 5 * i + 3 * j;
 			if (temp_sum == number)
 			{
-				printf("number five : %d\n", i);
+				temp=i;
 				i = number_five + 1;
 				break;
 			}
 		}
 	}
-	return number_five;
+	return temp;
 }
 
 int calculating_three(int number)
@@ -43,21 +44,20 @@ int calculating_three(int number)
 	int number_five = (number+4)/5;
 	int number_three = (number+2)/3;
 	int i;
+	int j;
 	for (i = 0; i <= number_five; i++)
 	{
-		int j;
 		for (j = 0; j <= number_three; j++)
 		{
 			int temp_sum = 5 * i + 3 * j;
 			if (temp_sum == number)
 			{
-                printf("number three : %d\n", j);
 				i = number_five + 1;
 				break;
 			}
 		}
 	}
-	return number_three;
+	return j;
 }
 
 int main()
@@ -65,8 +65,9 @@ int main()
 	while(1)
 	{
 		int number = input();
-		calculating_five(number);
-		calculating_three(number);
+		printf("number five : %d\n", calculating_five(number));
+		printf("number three : %d\n", calculating_three(number));
+		
 	}
 	return 0;
 }
