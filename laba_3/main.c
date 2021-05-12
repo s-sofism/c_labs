@@ -55,9 +55,7 @@ int main()
 	printf("Enter number of lines : ");
 	scanf("%d$", &n);
 	int **array = array_malloc(n, n);
-
 	calculation(array, n);
-
 	for (int i = 0; i < n; i++)  // цикл по строкам
 	{
 		for (int j = 0; j < n; j++)  // цикл по столбцам
@@ -66,7 +64,6 @@ int main()
 		}
 		printf("\n");
 	}
-
     array_free(array, n);
 	getchar();
 	return 0;
