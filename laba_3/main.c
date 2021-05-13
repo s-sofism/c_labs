@@ -33,10 +33,10 @@ void array_free(int **array, int n)
 
 void calculation(int **array, int n)
 {
-    for (int i = 0; i < n; i++)  // цикл по строкам
+    for (int i = 0; i < n; i++)
 	{
 		int a = i + 1;
-		for (int j = 0; j < n; j++)  // цикл по столбцам
+		for (int j = 0; j < n; j++)
 		{
 			array[i][j] =  a;
 			a++;
@@ -56,11 +56,11 @@ int main()
 	scanf("%d$", &n);
 	int **array = array_malloc(n, n);
 	calculation(array, n);
-	for (int i = 0; i < n; i++)  // цикл по строкам
+	for (int i = 0; i < n; i++)
 	{
-		for (int j = 0; j < n; j++)  // цикл по столбцам
+		for (int j = 0; j < n; j++)
 		{
-			printf("%5d ", array[i][j]); // 5 знакомест под элемент массива
+			printf("%5d ", array[i][j]);
 		}
 		printf("\n");
 	}
