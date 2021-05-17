@@ -1,14 +1,13 @@
 all: clean buildMain buildTest runTest
-buildMain:
-	mkdir -p project/main
-	gcc -o project/main/latin main.c -lm
 
-buildTest:
-	mkdir -p project/testing
-	gcc -o project/testing/testing -Dmain=_main main.c test.c -lm
+buildMain: main.c
+	gcc -o main main.c -std=c89 -lm
+
+buildTest: test.c
+	gcc -o test -Dmain=_main main.c test.c -std=c89 -lm
 
 runTest:
-	./project/testing/testing
-	
+	./test
+
 clean:
-	rm -rf project
+	rm -rf *.exe
