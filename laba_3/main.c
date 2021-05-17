@@ -24,7 +24,8 @@ int** array_malloc(int n, int m)
 
 void array_free(int **array, int n)
 {
-    for (int i = 0; i < n; i++)
+    int i;
+    for (i = 0; i < n; i++)
     {
         free(array[i]);
     }
@@ -33,10 +34,12 @@ void array_free(int **array, int n)
 
 void calculation(int **array, int n)
 {
-    for (int i = 0; i < n; i++)
+    int i;
+    for (i = 0; i < n; i++)
 	{
 		int a = i + 1;
-		for (int j = 0; j < n; j++)
+        int j;
+		for (j = 0; j < n; j++)
 		{
 			array[i][j] =  a;
 			a++;
@@ -56,9 +59,11 @@ int main()
 	scanf("%d$", &n);
 	int **array = array_malloc(n, n);
 	calculation(array, n);
-	for (int i = 0; i < n; i++)
+    int i;
+	for (i = 0; i < n; i++)
 	{
-		for (int j = 0; j < n; j++)
+        int j;
+		for (j = 0; j < n; j++)
 		{
 			printf("%5d ", array[i][j]);
 		}
