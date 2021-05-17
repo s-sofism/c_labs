@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int test_position() {
+int test() {
     int** array = array_malloc(5, 5);
     calculation(array, 5);
     assert(testing(3, 3, array) == 2);
@@ -16,6 +16,6 @@ int test_position() {
 }
 #undef main
 int main() {
-    test_position();
+    test();
     return 0;
 }
